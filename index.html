@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="imgs/Mortal_kombat_logo.png" type="image/x-icon">
+    <title>Mortal Kombat</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="lateral-direita"></div>
+        <div id="lateral-esquerda"></div>
+        <header>
+            
+            <a href="index.html"><img src="imgs/mk-ultimate-logo.png" alt="baner mk" id="baner-mk"></a>
+            <audio loop id="musicamk">
+                <source src="videos/Techno Syndrome (Mortal Kombat) Song by The Immortals_EAwWPadFsOA.mp3"
+                    type="audio/mpeg">
+                </audio>
+                <button id="playPauseBtn">Play</button>
+            <ul>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="jogos.html">Jogo</a></li>
+                <li><a href="filmes.html">filmes</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="video-inicial">
+                <video autoplay loop playsinline>
+                    <source src="/videos/ultimate.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+
+        <footer>
+                <img src="imgs/MK11-footer.png" alt="fatality">
+        </footer>
+    </div>
+    <script>
+        const audio = document.getElementById('musicamk');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+
+        audio.volume =  0.1;
+        // Função para alternar entre play e pause
+        playPauseBtn.addEventListener('click', function () {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+    </script>
+</body>
+
+</html>
